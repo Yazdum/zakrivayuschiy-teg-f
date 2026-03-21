@@ -1,1 +1,38 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  /* Шрифты */
+  --font-family-primary: "Inter", system-ui, -apple-system, sans-serif;
+  --font-family-accent: "Press Start 2P", cursive;
+
+  /* Веса шрифтов */
+  --font-weight-body: 410;
+  --font-weight-heading: 715;
+
+  /* Цвета */
+  --color-accent: #000000;
+  --color-text: #ffffff;
+  --color-pseudo-bg: #000000;
+  --contour-color: #000000;
+  --animation-fill-color: #ff0000;
+  --hover-color: #000000;
+  --label-stroke-color: #e8e8e8;
+
+  --background-grid:
+    repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
+    repeating-linear-gradient(180deg, #d3d3d3 0 2px, transparent 2px 4px),
+    linear-gradient(180deg, #e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%);
+
+  /* Отступы/размеры */
+  --container-width: clamp(375px, 90%, 700px);
+  --header-padding: 100px;
+  --logo-size: clamp(49px, 6vw, 65px);
+  --header-gap: 20px;
+  --card-padding: 4px 10px;
+  --card-body-padding: 25px;
+  --card-footer-padding: 0 25px 25px 25px;
+  --card-body-gap: 25px;
+  --card-footer-gap: 6px;
+  --card-gap: 50px;
+  --card-image-height: clamp(371px, 50vw, 696px);
+  --modal-gap: 30px;
+  --label-position: 25px;
+}

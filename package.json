@@ -1,0 +1,11 @@
+{
+  "name": "zakrivayuschiy-teg-f",
+  "version": "1.0.0",
+  "description": "Проект «Закрывающий тег. Финал»",
+  "scripts": {
+    "format": "prettier --write \"**/*.{html,css,js}\" && node scripts/fix-html.js"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3"
+  }
+}
