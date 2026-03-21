@@ -69,6 +69,7 @@
   padding: var(--card-padding);
   font-family: var(--font-family-primary);
   font-weight: var(--font-weight-heading);
+  font-variation-settings: "wght" var(--font-weight-heading);
   line-height: 22px;
   letter-spacing: 0;
   font-size: 18px;
