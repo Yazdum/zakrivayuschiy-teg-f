@@ -6,6 +6,7 @@
 
   font-family: var(--font-family-primary);
   font-weight: var(--font-weight-body);
+  font-variation-settings: var(--font-variation-settings);
 
   background-image: var(--background-grid);
   background-size: cover;
@@ -104,7 +105,7 @@
 
 @supports not (-webkit-text-stroke: 1px var(--label-stroke-color)) {
   .card__label {
-    color: #ffffff;
+    color: black;
     text-shadow:
       1px 1px 0 var(--label-stroke-color),
       -1px 1px 0 var(--label-stroke-color),
@@ -163,7 +164,7 @@
 .card__text {
   font-family: var(--font-family-primary);
   font-size: 18px;
-  font-weight: 410;
+  font-variation-settings: var(--font-variation-settings);
   line-height: 21px;
   letter-spacing: 0;
 }
@@ -176,7 +177,8 @@
   gap: var(--card-footer-gap);
 }
 
-.card__like-button {
+/* Общие стили для кнопок */
+.button {
   position: relative;
   background: transparent;
   border: 2px solid #000000;
@@ -186,21 +188,21 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  inline-size: 130px;
   block-size: 38px;
+  inline-size: 130px;
 }
 
-.card__like-button:focus {
+.button:focus {
   outline: none;
   box-shadow: 2px 2px 0 0 var(--color-accent);
   transition: box-shadow 0.3s ease;
 }
 
-.card__like-button:active {
+.button:active {
   box-shadow: none;
 }
 
-.card__like-button::before {
+.button::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -209,15 +211,42 @@
   transition: transform 0.5s ease-in-out;
 }
 
-.card__like-button:hover::before {
+.button:hover::before {
   transform: translateX(0);
 }
 
-.card__like-button .button-text {
+.button .button-text {
   position: relative;
   z-index: 1;
   color: var(--color-text);
   mix-blend-mode: difference;
+}
+
+.button--full {
+  inline-size: 100%;
+}
+
+.button--save {
+  background: #ffffff;
+  border: 1px solid #000000;
+  padding: 15px 20px;
+  flex-direction: row;
+  gap: 8px;
+  block-size: auto;
+  inline-size: auto;
+}
+
+.button--save .button-text,
+.button--save .button__icon {
+  position: relative;
+  z-index: 1;
+  color: var(--color-text);
+  mix-blend-mode: difference;
+}
+
+.button__icon {
+  inline-size: 21px;
+  block-size: 21px;
 }
 
 .card__icon-button {
@@ -253,52 +282,6 @@
   justify-content: center;
 }
 
-.save-button {
-  position: relative;
-  background: #ffffff;
-  border: 1px solid #000000;
-  padding: 15px 20px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 8px;
-  cursor: pointer;
-  overflow: hidden;
-}
-
-.save-button:focus {
-  outline: none;
-  box-shadow: 2px 2px 0 0 var(--color-accent);
-  transition: box-shadow 0.3s ease;
-}
-
-.save-button::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: var(--color-pseudo-bg);
-  transform: translateX(-100%);
-  transition: transform 0.5s ease-in-out;
-}
-
-.save-button:hover::before {
-  transform: translateX(0);
-}
-
-.save-button .button-text,
-.save-button-text,
-.save-button .save-button__icon {
-  position: relative;
-  z-index: 1;
-  color: var(--color-text);
-  mix-blend-mode: difference;
-}
-
-.save-button__icon {
-  inline-size: 21px;
-  block-size: 21px;
-}
-
 /* Модальное окно */
 .modal {
   display: none;
@@ -319,7 +302,7 @@
 }
 
 .modal::backdrop {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.75);
 }
 
 .modal[open] {
@@ -355,50 +338,7 @@
   line-height: 1.4;
   margin: 0;
   text-align: start;
-}
-
-.modal__button {
-  position: relative;
-  background: transparent;
-  border: 2px solid #000000;
-  padding: 9px 17px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  inline-size: 100%;
-  block-size: 38px;
-}
-
-.modal__button:focus {
-  outline: none;
-  box-shadow: 2px 2px 0 0 var(--color-accent);
-  transition: box-shadow 0.3s ease;
-}
-
-.modal__button:active {
-  box-shadow: none;
-}
-
-.modal__button::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: var(--color-pseudo-bg);
-  transform: translateX(-100%);
-  transition: transform 0.5s ease-in-out;
-}
-
-.modal__button:hover::before {
-  transform: translateX(0);
-}
-
-.modal__button .button-text {
-  position: relative;
-  z-index: 1;
-  color: var(--color-text);
-  mix-blend-mode: difference;
+  text-transform: uppercase;
 }
 
 @keyframes modal-appear {
@@ -413,12 +353,12 @@
 }
 
 @media screen and (max-width: 767px) {
-  .save-button {
+  .button--save {
     flex-direction: column;
   }
 
-  .save-button .save-button__icon,
-  .save-button__icon {
+  .button--save .button__icon,
+  .button__icon {
     inline-size: 28px;
     block-size: 28px;
   }

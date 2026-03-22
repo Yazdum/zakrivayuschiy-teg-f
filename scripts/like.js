@@ -1,8 +1,5 @@
-// Классы для работы скрипта:
-// like-icon, card__like-button, card__icon-button, is-liked, button-text
-
 const likeHeartArray = document.querySelectorAll(".like-icon");
-const likeButtonArray = document.querySelectorAll(".card__like-button");
+const likeButtonArray = document.querySelectorAll(".card__footer .button");
 const iconButtonArray = document.querySelectorAll(".card__icon-button");
 
 iconButtonArray.forEach((iconButton, index) => {
@@ -10,8 +7,12 @@ iconButtonArray.forEach((iconButton, index) => {
     toggleIsLiked(likeHeartArray[index], likeButtonArray[index]);
 });
 
-likeButtonArray.forEach((button, index) => {
-  button.onclick = () => toggleIsLiked(likeHeartArray[index], button);
+likeButtonArray.forEach((button) => {
+  button.onclick = () => {
+    const likeHeart =
+      button.parentElement.previousElementSibling.querySelector(".like-icon");
+    toggleIsLiked(likeHeart, button);
+  };
 });
 
 function toggleIsLiked(heart, button) {
@@ -34,7 +35,7 @@ function setButtonText(heart, button) {
 }
 
 // Модальное окно
-const saveButton = document.querySelector(".save-button");
+const saveButton = document.querySelector(".button--save");
 const modal = document.getElementById("modal");
 const modalClose = document.getElementById("modal-close");
 

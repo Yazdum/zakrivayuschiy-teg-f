@@ -19,7 +19,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="./images/favicon-96x96.png">
     <meta name="theme-color" content="#ffffff">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="manifest" href="./site.webmanifest">
     <link rel="stylesheet" href="./fonts/fonts.css">
     <link rel="stylesheet" href="./styles/variables.css">
     <link rel="stylesheet" href="./styles/globals.css">
@@ -31,7 +31,7 @@
     <header class="header">
       <div class="header__container">
         <span class="header__logo">&lt;/HTML&gt;</span>
-        <h1 class="header__title">ЗАКРЫВАЮЩИЙ ТЕГ</h1>
+        <h1 class="header__title">Закрывающий тег</h1>
       </div>
     </header>
     <main class="content">
@@ -90,7 +90,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button" type="button">
+            <button class="button" type="button">
               <span class="button-text">Like</span>
             </button>
           </footer>
@@ -150,7 +150,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button" type="button">
+            <button class="button" type="button">
               <span class="button-text">Like</span>
             </button>
           </footer>
@@ -208,7 +208,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button" type="button">
+            <button class="button" type="button">
               <span class="button-text">Like</span>
             </button>
           </footer>
@@ -268,7 +268,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button" type="button">
+            <button class="button" type="button">
               <span class="button-text">Like</span>
             </button>
           </footer>
@@ -329,7 +329,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button" type="button">
+            <button class="button" type="button">
               <span class="button-text">Like</span>
             </button>
           </footer>
@@ -387,7 +387,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button" type="button">
+            <button class="button" type="button">
               <span class="button-text">Like</span>
             </button>
           </footer>
@@ -447,7 +447,7 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button" type="button">
+            <button class="button" type="button">
               <span class="button-text">Like</span>
             </button>
           </footer>
@@ -509,25 +509,18 @@
                 />
               </svg>
             </button>
-            <button class="card__like-button" type="button">
+            <button class="button" type="button">
               <span class="button-text">Like</span>
             </button>
           </footer>
         </article>
 
         <div class="save-section">
-          <button class="save-button" type="button">
-            <svg
-              class="save-button__icon"
-              width="24"
-              height="24"
-              aria-hidden="true"
-            >
+          <button class="button button--save" type="button">
+            <svg class="button__icon" width="24" height="24" aria-hidden="true">
               <use href="./svg/floppy.svg#floppy"></use>
             </svg>
-            <span class="save-button-text button-text"
-              >Сохранить на память</span
-            >
+            <span class="button-text">Сохранить на память</span>
           </button>
         </div>
       </div>
@@ -539,9 +532,9 @@
           <svg class="modal__icon" width="48" height="48" aria-hidden="true">
             <use href="./svg/floppy.svg#floppy"></use>
           </svg>
-          <p class="modal__text">ВСТАВЬТЕ ДИСКЕТУ, ЧТОБЫ ПРОДОЛЖИТЬ</p>
+          <p class="modal__text">Вставьте дискету, чтобы продолжить</p>
         </div>
-        <button class="modal__button" type="button" id="modal-close">
+        <button class="button button--full" type="button" id="modal-close">
           <span class="button-text">ОК</span>
         </button>
       </div>

@@ -1,7 +1,8 @@
 :root {
   /* Шрифты */
   --font-family-primary: "Inter", system-ui, -apple-system, sans-serif;
-  --font-family-accent: "Press Start 2P", cursive;
+  --font-family-accent: "Press Start 2P", fantasy;
+  --font-variation-settings: "wght" 410;
 
   /* Веса шрифтов */
   --font-weight-body: 410;
@@ -14,7 +15,7 @@
   --contour-color: #000000;
   --animation-fill-color: #ff0000;
   --hover-color: #000000;
-  --label-stroke-color: #e8e8e8;
+  --label-stroke-color: #fff;
 
   --background-grid:
     repeating-linear-gradient(90deg, #d3d3d3 0 2px, transparent 2px 4px),
