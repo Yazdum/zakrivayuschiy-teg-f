@@ -31,7 +31,7 @@
   --card-body-padding: 25px;
   --card-footer-padding: 0 25px 25px 25px;
   --card-body-gap: 25px;
-  --card-footer-gap: 6px;
+  --card-footer-gap: 5px;
   --card-gap: 50px;
   --card-image-height: clamp(371px, 50vw, 696px);
   --modal-gap: 30px;

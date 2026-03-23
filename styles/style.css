@@ -254,19 +254,22 @@
   align-items: center;
   justify-content: center;
   background: transparent;
-  border: none;
+  border: 2px solid transparent;
   padding: 0;
   cursor: pointer;
+  inline-size: 41px;
+  block-size: 38px;
+  outline: none;
 }
 
 .card__icon-button:focus-visible {
-  outline: 2px solid var(--color-accent);
-  outline-offset: 2px;
+  border-color: var(--color-accent);
 }
 
 .card__icon-button .like-icon {
-  inline-size: 39px;
-  block-size: 36px;
+  margin: auto;
+  inline-size: 41px;
+  block-size: 34px;
   display: block;
 }
 
@@ -284,14 +287,14 @@
 
 /* Модальное окно */
 .modal {
-  display: none;
+  display: block;
   position: fixed;
   inset: 0;
   margin: auto;
   padding: 30px 40px;
   border: 2px solid #000000;
   background-color: #ffffff;
-  max-inline-size: clamp(280px, 90%, 400px);
+  max-inline-size: clamp(341px, 90%, 353px);
   max-block-size: fit-content;
 }
 

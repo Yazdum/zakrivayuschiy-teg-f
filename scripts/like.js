@@ -10,7 +10,7 @@ iconButtonArray.forEach((iconButton, index) => {
 likeButtonArray.forEach((button) => {
   button.onclick = () => {
     const likeHeart =
-      button.parentElement.previousElementSibling.querySelector(".like-icon");
+      button.previousElementSibling.querySelector(".like-icon");
     toggleIsLiked(likeHeart, button);
   };
 });
