@@ -287,7 +287,7 @@
 
 /* Модальное окно */
 .modal {
-  display: block;
+  display: none;
   position: fixed;
   inset: 0;
   margin: auto;
